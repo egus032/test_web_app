@@ -31,13 +31,7 @@
      
     <context:component-scan base-package="com.mycompany.test_web_app"/> 
     
-    <!--пул соединений с базой данных-->
-    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost/test_web_app"/>
-        <property name="username" value="root"/>
-        <property name="password" value="qwerty"/>
-    </bean>
+    
     
     <!--бин, обращающийся к базе данных через другой бин, а также сканирующий пакет с классами
     и имеющий свойство для связи Hibernate с базой данных-->
@@ -47,6 +41,14 @@
         <property name="hibernateProperties">
             <value>hibernate.dialect=org.hibernate.dialect.MySQLDialect</value>
         </property>
+    </bean>
+    
+    <!--пул соединений с базой данных-->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/test_web_app"/>
+        <property name="username" value="root"/>
+        <property name="password" value="qwerty"/>
     </bean>
     
     <!--бин для создания объекта типа UserDao, но так как интерфейс, то пишем ссылку на класс имплемент-->

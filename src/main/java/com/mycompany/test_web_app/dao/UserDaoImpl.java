@@ -47,7 +47,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> getListUsers() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "FROM User as u";
+        return sessionFactory.getCurrentSession().createQuery(sql).list();
     }
 
     @Override

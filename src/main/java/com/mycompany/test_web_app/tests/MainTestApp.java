@@ -7,6 +7,7 @@ package com.mycompany.test_web_app.tests;
 
 import com.mycompany.test_web_app.dao.UserDao;
 import com.mycompany.test_web_app.models.User;
+import java.util.List;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 /**
@@ -27,13 +28,16 @@ public class MainTestApp {
         
         UserDao userDao = gxac.getBean("userDao", UserDao.class);
         
+        User user = new User();
+        user.setEmail("email@mail.ru");
+        user.setPassword("password");
         
-        
-                
-        
+        userDao.createUser(user);
         
         
     }
+    
+    
     
     
 }
