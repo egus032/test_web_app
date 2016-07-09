@@ -16,7 +16,15 @@
     </head>
     <body>
         <header><jsp:include page="/WEB-INF/views/header.jsp"></jsp:include></header>
+        <div class="main-content">
         <h1>Hello World!</h1>
+        <h1>Hello World!</h1>
+        <h1>Hello World!</h1>
+        <h1>Hello World!</h1>
+        <h1>Hello World!</h1>
+        <h1>Hello World!</h1>
+        </div>
+        <footer><jsp:include page="/WEB-INF/views/footer.jsp"></jsp:include></footer>
         <!-- Bootstrap core JavaScript-->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
