@@ -14,9 +14,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    <listener>
-        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
-    </listener>
+    
  
     <servlet>
         <servlet-name>test_web_app</servlet-name>
@@ -37,9 +35,6 @@
         <welcome-file>/WEB-INF/views/index.jsp</welcome-file>
     </welcome-file-list>
  
-    <error-page>
-        <error-code>404</error-code>
-        <location>/static/app/404.html</location>
-    </error-page>
+    
     
 </web-app>

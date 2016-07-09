@@ -42,7 +42,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getUserById(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (User) sessionFactory.getCurrentSession().createQuery("FROM User u WHERE u.id = ?")
+                .setParameter("id", id).uniqueResult();
     }
 
     @Override
